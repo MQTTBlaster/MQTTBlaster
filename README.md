@@ -6,19 +6,20 @@ Publisher HW<---->Broker HW<----->Client HW
 
 Usage of tool:
 --------------
-#1: Install the mqtt broker SW you want to test on a HW. (Broker HW in above diagram)
-#2: Install mqtt client SW on both "Publisher HW" and "Client HW"
-#3: Download self contained mqtt-blaster repo binary from below URL to the "Publisher HW" runnng Ubuntu 18.04 or higher.
+(1) Install the mqtt broker SW you want to test on a HW. (Broker HW in above diagram)
+(2) Install mqtt client SW on both "Publisher HW" and "Client HW"
+(3) Download self contained mqtt-blaster repo binary from below URL to the "Publisher HW" runnng Ubuntu 18.04 or higher.
 Qos0: https://github.com/MQTTBlaster/MQTTBlaster/tree/master/mqtt-publisher-QOS0
 Qos1: https://github.com/MQTTBlaster/MQTTBlaster/tree/master/mqtt-publisher-QOS1
 Qos2: https://github.com/MQTTBlaster/MQTTBlaster/tree/master/mqtt-publisher-QOS2
-#4: Copy "stats-3.sh" to "Broker HW" at /usr/share/mqtt/. Make it executable. Add this directory to system path.
-#5: Enable password less login from "Publisher HW" to "Broker HW" for root user. (may use ssh-copyid)
-#6: Create few clients on "Client HW" subscribing for "topic/#" messages. 
+(4) Copy "stats-3.sh" to "Broker HW" at /usr/share/mqtt/. Make it executable. Add this directory to system path.
+(5) Enable password less login from "Publisher HW" to "Broker HW" for root user. (may use ssh-copyid)
+(6) Create few clients on "Client HW" subscribing for "topic/#" messages. 
     Note: On our HW we had used 15 clients to stress the broker to 100%. This number could be different depending on HW/SW combinations.
-#7: From "mqtt-publisher-QOS[x]" folder execute "./mqtt-publisher-QOS0"
+(7) From "mqtt-publisher-QOS[x]" folder execute "./mqtt-publisher-QOS0"
     Ex: ~/mqtt/git-submit/mqttorg/MQTTBlaster/mqtt-publisher-QOS0$ ./mqtt-publisher-QOS0
-#8: You can modify "mqtt-blaster.ini" present in "mqtt-publisher-QOS[x]" configure the tool for your environment. Or to change rate of message, or maximum messages to be sent to broker, server address, etc.. 
+(8) You can modify "mqtt-blaster.ini" present in "mqtt-publisher-QOS[x]" configure the tool for your environment. 
+    Or to change rate of message, or maximum messages to be sent to broker, server address, etc.. 
 
 Config File Paramenter: (mqtt-blaster.ini)
 ------------------------------------------
