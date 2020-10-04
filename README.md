@@ -19,7 +19,7 @@ Publisher HW\<----\>Broker HW\<-----\>Client HW
     "Publisher HW" running Ubuntu 18.04 or higher.
 
 -   Qos0:
-    [https://github.com/MQTTBlaster/MQTTBlaster/tree/master/mqtt-publisher-QOS0](%20https:/github.com/MQTTBlaster/MQTTBlaster/tree/master/mqtt-publisher-QOS0)
+    <https://github.com/MQTTBlaster/MQTTBlaster/tree/master/mqtt-publisher-QOS0>
 
 -   Qos1:
     <https://github.com/MQTTBlaster/MQTTBlaster/tree/master/mqtt-publisher-QOS1>
